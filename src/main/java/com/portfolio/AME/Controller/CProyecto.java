@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/proyecto")
-@CrossOrigin(origins ="http://localhost:4200")
+@CrossOrigin(origins = {"https://mod3-frontfire.web.app","http://localhost:4200"})
 
 public class CProyecto {
     @Autowired
@@ -99,4 +99,3 @@ public class CProyecto {
         return new ResponseEntity(new Mensaje("Proyecto actualizado"), HttpStatus.OK);
     }
 }
-
