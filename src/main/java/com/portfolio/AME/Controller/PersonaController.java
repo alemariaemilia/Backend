@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -52,7 +53,7 @@ public class PersonaController {
         return new ResponseEntity(new Mensaje("Persona Eliminada"), HttpStatus.OK);
     }*/
     
-    /*@PostMapping("/create")
+    @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoPersona dtopersona){
         if(StringUtils.isBlank(dtopersona.getNombre())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
@@ -62,12 +63,12 @@ public class PersonaController {
         }
         
         Persona persona = new Persona(
-                dtopersona.getNombre(), dtopersona.getDescripcion()
+                dtopersona.getNombre(), dtopersona.getDescripcion(), dtopersona.getApellido(), dtopersona.getImg()
             );
         personaService.save(persona);
         return new ResponseEntity(new Mensaje("Persona creada"), HttpStatus.OK);
                 
-    }*/
+    }
     
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoPersona dtopersona){
