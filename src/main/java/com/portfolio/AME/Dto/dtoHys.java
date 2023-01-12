@@ -12,13 +12,16 @@ public class dtoHys {
     private String nombre;
     @NotBlank
     private int porcentaje;
+    @NotBlank
+    private String color;
 
     public dtoHys() {
     }
 
-    public dtoHys(String nombre, int porcentaje) {
+    public dtoHys(String nombre, int porcentaje, String color) {
         this.nombre = nombre;
         this.porcentaje = porcentaje;
+        this.color = color;
     }
 
     public String getNombre() {
@@ -35,5 +38,13 @@ public class dtoHys {
 
     public void setPorcentaje(int porcentaje) {
         this.porcentaje = porcentaje;
+    }
+    
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }
