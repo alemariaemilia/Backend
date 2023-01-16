@@ -15,14 +15,20 @@ public class dtoEducacion {
     private String descripcionE;
     @NotBlank
     private String imgE;
+    @NotBlank
+    private String inicioE;
+    @NotBlank
+    private String finalE;
 
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreE, String descripcionE, String imgE) {
+    public dtoEducacion(String nombreE, String descripcionE, String imgE, String inicioE, String finalE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.imgE = imgE;
+        this.inicioE = inicioE;
+        this.finalE = finalE;
 
     }
 
@@ -48,6 +54,22 @@ public class dtoEducacion {
 
     public void setImgE(String imgE) {
         this.imgE = imgE;
+    }
+    
+    public String getInicioE() {
+        return inicioE;
+    }
+
+    public void setInicioE(String inicioE) {
+        this.inicioE = inicioE;
+    }
+
+    public String getFinalE() {
+        return finalE;
+    }
+
+    public void setFinalE(String finalE) {
+        this.finalE = finalE;
     }
 
 }

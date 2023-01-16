@@ -68,7 +68,7 @@ public class CProyecto {
         }
 
         Proyecto proyecto = new Proyecto(
-                dtoproyecto.getTituloP(), dtoproyecto.getDescripcionP(), dtoproyecto.getImgP(), dtoproyecto.getUrlP());
+                dtoproyecto.getTituloP(), dtoproyecto.getDescripcionP(), dtoproyecto.getImgP(), dtoproyecto.getUrlP(), dtoproyecto.getInicioP(), dtoproyecto.getFinalP());
         sProyecto.save(proyecto);
         return new ResponseEntity(new Mensaje("Proyecto creado"), HttpStatus.OK);
 
@@ -93,6 +93,8 @@ public class CProyecto {
         proyecto.setDescripcionP(dtoproyecto.getDescripcionP());
         proyecto.setImgP(dtoproyecto.getImgP());
         proyecto.setUrlP(dtoproyecto.getUrlP());
+        proyecto.setInicioP(dtoproyecto.getInicioP());
+        proyecto.setFinalP(dtoproyecto.getFinalP());
 
         sProyecto.save(proyecto);
 

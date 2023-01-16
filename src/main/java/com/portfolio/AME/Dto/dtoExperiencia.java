@@ -10,16 +10,22 @@ public class dtoExperiencia {
     private String descripcionE;
     @NotBlank
     private String imgE;
+    @NotBlank
+    private String inicioE;
+    @NotBlank
+    private String finalE;
 
     // Constructores
 
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE, String imgE) {
+    public dtoExperiencia(String nombreE, String descripcionE, String imgE, String InicioE, String FinalE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.imgE = imgE;
+        this.inicioE = inicioE;
+        this.finalE = finalE;
         
     }
     // Getters & Setters
@@ -46,6 +52,22 @@ public class dtoExperiencia {
 
     public void setImgE(String imgE) {
         this.imgE = imgE;
+    }
+    
+    public String getInicioE() {
+        return inicioE;
+    }
+
+    public void setInicioE(String inicioE) {
+        this.inicioE = inicioE;
+    }
+
+    public String getFinalE() {
+        return finalE;
+    }
+
+    public void setoFinalE(String finalE) {
+        this.finalE = finalE;
     }
     
 

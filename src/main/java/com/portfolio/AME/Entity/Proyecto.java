@@ -20,15 +20,19 @@ public class Proyecto {
     private String descripcionP;
     private String imgP;
     private String urlP;
+    private String inicioP;
+    private String finalP;
 
     public Proyecto() {
     }
 
-    public Proyecto(String tituloP, String descripcionP, String imgP, String urlP) {
+    public Proyecto(String tituloP, String descripcionP, String imgP, String urlP, String inicioP, String finalP) {
         this.tituloP = tituloP;
         this.descripcionP = descripcionP;
         this.imgP = imgP;
         this.urlP = urlP;
+        this.inicioP = inicioP;
+        this.finalP = finalP;
     }
 
     public int getId() {
@@ -70,6 +74,24 @@ public class Proyecto {
     public void setUrlP(String urlP) {
         this.urlP = urlP;
     }
+
+    public String getInicioP() {
+        return inicioP;
+    }
+
+    public void setInicioP(String inicioP) {
+        this.inicioP = inicioP;
+    }
+
+    public String getFinalP() {
+        return finalP;
+    }
+
+    public void setFinalP(String finalP) {
+        this.finalP = finalP;
+    }
+    
+    
     
     
 }

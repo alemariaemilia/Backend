@@ -17,15 +17,21 @@ public class dtoProyecto {
     private String imgP;
     @NotBlank
     private String urlP;
+    @NotBlank
+    private String inicioP;
+    @NotBlank
+    private String finalP;
 
     public dtoProyecto() {
     }
 
-    public dtoProyecto(String tituloP, String descripcionP, String imgP, String urlP) {
+    public dtoProyecto(String tituloP, String descripcionP, String imgP, String urlP, String inicioP, String finalP) {
         this.tituloP = tituloP;
         this.descripcionP = descripcionP;
         this.imgP = imgP;
         this.urlP = urlP;
+        this.inicioP = inicioP;
+        this.finalP = finalP;
     }
 
     public String getTituloP() {
@@ -59,4 +65,22 @@ public class dtoProyecto {
     public void setUrlP(String urlP) {
         this.urlP = urlP;
     }
+
+    public String getInicioP() {
+        return inicioP;
+    }
+
+    public void setInicioP(String inicioP) {
+        this.inicioP = inicioP;
+    }
+
+    public String getFinalP() {
+        return finalP;
+    }
+
+    public void setFinalP(String finalP) {
+        this.finalP = finalP;
+    }
+    
+    
 }

@@ -14,16 +14,21 @@ public class Experiencia {
     private String nombreE;
     private String descripcionE;
     private String imgE;
+    private String inicioE;
+    private String finalE;
+    
 
     // Constructores
 
     public Experiencia() {
     }
 
-    public Experiencia(String nombreE, String descripcionE, String imgE) {
+    public Experiencia(String nombreE, String descripcionE, String imgE, String inicioE, String finalE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.imgE = imgE;
+        this.inicioE = inicioE;
+        this.finalE = finalE;
     }
 
     // Getters and setters
@@ -58,6 +63,22 @@ public class Experiencia {
 
     public void setImgE(String imgE) {
         this.imgE = imgE;
+    }
+    
+    public String getInicioE() {
+        return inicioE;
+    }
+
+    public void setInicioE(String inicioE) {
+        this.inicioE = inicioE;
+    }
+
+    public String getFinalE() {
+        return finalE;
+    }
+
+    public void setFinalE(String finalE) {
+        this.finalE = finalE;
     }
 
 }
